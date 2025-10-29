@@ -1,0 +1,16 @@
+                  precision    recall  f1-score   support
+
+down_by_elevator     0.2619    0.1134    0.1583        97
+      going_down     0.9058    0.9804    0.9416       255
+        going_up     0.9267    0.9844    0.9547       321
+         running     0.9709    0.9804    0.9756       102
+         sitting     0.9914    0.9545    0.9726       242
+    sitting_down     0.8333    0.9211    0.8750        38
+        standing     0.7598    0.8094    0.7838       383
+     standing_up     0.7872    0.9737    0.8706        38
+  up_by_elevator     0.3333    0.3247    0.3289        77
+         walking     0.9738    0.9449    0.9591       472
+
+        accuracy                         0.8696      2025
+       macro avg     0.7744    0.7987    0.7820      2025
+    weighted avg     0.8547    0.8696    0.8599      2025

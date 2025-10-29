@@ -1,0 +1,91 @@
+experiment_id: EXP-002
+dataset:
+  root: C:\\Users\\sujaa\\PBL\\DB
+  pattern: '**/*.csv'
+  subject_column: null
+  label_column: activity
+  channels:
+  - accelerometer_right_foot_x
+  - accelerometer_right_foot_y
+  - accelerometer_right_foot_z
+  - gyroscope_right_foot_x
+  - gyroscope_right_foot_y
+  - gyroscope_right_foot_z
+  - accelerometer_right_shin_x
+  - accelerometer_right_shin_y
+  - accelerometer_right_shin_z
+  - gyroscope_right_shin_x
+  - gyroscope_right_shin_y
+  - gyroscope_right_shin_z
+  - accelerometer_right_thigh_x
+  - accelerometer_right_thigh_y
+  - accelerometer_right_thigh_z
+  - gyroscope_right_thigh_x
+  - gyroscope_right_thigh_y
+  - gyroscope_right_thigh_z
+  - accelerometer_left_foot_x
+  - accelerometer_left_foot_y
+  - accelerometer_left_foot_z
+  - gyroscope_left_foot_x
+  - gyroscope_left_foot_y
+  - gyroscope_left_foot_z
+  - accelerometer_left_shin_x
+  - accelerometer_left_shin_y
+  - accelerometer_left_shin_z
+  - gyroscope_left_shin_x
+  - gyroscope_left_shin_y
+  - gyroscope_left_shin_z
+  - accelerometer_left_thigh_x
+  - accelerometer_left_thigh_y
+  - accelerometer_left_thigh_z
+  - gyroscope_left_thigh_x
+  - gyroscope_left_thigh_y
+  - gyroscope_left_thigh_z
+preprocessing:
+  window_seconds: 4.0
+  overlap: 0.5
+  sampling_rate_hz: 56.35
+  normalization: zscore_per_channel
+split:
+  strategy: subject_wise
+  train_subjects:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  val_subjects:
+  - 15
+  - 16
+  test_subjects:
+  - 17
+  - 18
+training:
+  augmentation:
+    enabled: false
+  seed: 42
+  batch_size: 256
+  epochs: 50
+  optimizer: adamw
+  learning_rate: 0.001
+  weight_decay: 0.0
+  dropout: 0.3
+  early_stop_patience: 10
+logging:
+  out_dir: ./artifacts/EXP-002
+  save_every: 0
+  plot_curves: true
+model:
+  type: LSTM
+  hidden_size: 128
+  num_layers: 2
+  bidirectional: true
