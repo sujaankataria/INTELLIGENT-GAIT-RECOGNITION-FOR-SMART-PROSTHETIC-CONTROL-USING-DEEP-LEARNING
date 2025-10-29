@@ -1,0 +1,12 @@
+[
+  "down_by_elevator",
+  "going_down",
+  "going_up",
+  "running",
+  "sitting",
+  "sitting_down",
+  "standing",
+  "standing_up",
+  "up_by_elevator",
+  "walking"
+]
